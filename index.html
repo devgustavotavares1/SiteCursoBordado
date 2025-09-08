@@ -13,133 +13,29 @@
       --bg:#f4f6fb;
       --card:#ffffff;
       --muted:#667085;
-      --accent:#0f172a; /* primary text */
-      --brand:#7c3aed; /* purple accent */
-      --success:#10b981;
-      --danger:#ef4444;
-      --glass: rgba(15,23,42,0.04);
+      --accent:#0f172a;
+      --brand:#7c3aed;
       --radius:12px;
       --maxw:1100px;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--bg),#eef2ff 120%);
-      color:var(--accent);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      font-size:15px;
-      line-height:1.45;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* layout */
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff 120%);color:var(--accent);font-size:15px;line-height:1.45}
+    a{text-decoration:none;color:inherit}
     .container{max-width:var(--maxw);margin:28px auto;padding:0 20px}
-    header{
-      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;
-    }
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:46px;height:46px;border-radius:10px;display:grid;place-items:center;color:white;
-      background:linear-gradient(135deg,var(--brand),#ff6fa3);
-      font-weight:800;box-shadow:0 10px 30px rgba(124,58,237,0.12);
-    }
-    nav.desktop{display:flex;gap:14px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),#ff6fa3);color:white;font-weight:800}
+    nav.desktop{display:flex;gap:14px}
     nav.desktop a{padding:8px 12px;border-radius:8px;color:var(--muted)}
     nav.desktop a.active{color:var(--brand);font-weight:600}
-    .user{display:flex;align-items:center;gap:10px}
-    .avatar{width:38px;height:38px;border-radius:10px;background:#eef2ff;display:grid;place-items:center;font-weight:700;color:var(--brand)}
-    .btn-primary{
-      background:var(--brand);color:white;padding:9px 14px;border-radius:10px;border:0;font-weight:700;
-      box-shadow:0 8px 22px rgba(124,58,237,0.12);
-    }
-
-    /* layout main area */
+    .avatar{width:38px;height:38px;border-radius:10px;background:#eef2ff;display:grid;place-items:center;color:var(--brand);font-weight:700}
+    .btn-primary{background:var(--brand);color:white;padding:9px 14px;border-radius:10px;font-weight:700;border:0}
     .layout{display:grid;grid-template-columns:300px 1fr;gap:20px}
-    .sidebar{
-      position:sticky;top:26px;height:calc(100vh - 56px);align-self:start;
-      background:transparent;display:flex;flex-direction:column;gap:14px;
-    }
-    .card{
-      background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 28px rgba(15,23,42,0.04);
-      border: 1px solid rgba(15,23,42,0.03);
-    }
-    .profile {
-      display:flex;gap:12px;align-items:center;
-    }
-    .profile .meta{font-weight:600}
-    .progress {
-      margin-top:12px;
-      background:linear-gradient(90deg,#f1f5f9,#ffffff);
-      border-radius:10px;padding:10px;
-    }
-    .progress-bar{
-      height:10px;background:linear-gradient(90deg,var(--brand),#ff7ab6);border-radius:8px;width:0%;
-      transition:width .6s ease;
-    }
-    .navlist{display:flex;flex-direction:column;gap:6px;margin-top:8px}
-    .navlist a{padding:10px;border-radius:8px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
-    .navlist a.active{background:rgba(124,58,237,0.06);color:var(--brand);font-weight:600}
-
-    /* content area */
-    .content-top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}
-    .welcome h1{margin:0;font-size:22px}
-    .welcome p{margin:6px 0 0;color:var(--muted);font-size:14px}
-    .modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .module{
-      border-radius:12px;padding:14px;background:linear-gradient(180deg,#ffffff,#fbfdff);
-      display:flex;flex-direction:column;gap:10px;border:1px solid rgba(15,23,42,0.03)
-    }
-    .module .left{display:flex;gap:12px;align-items:center}
-    .thumb{width:76px;height:76px;border-radius:10px;background:linear-gradient(180deg,#f1f5f9,#eef2ff);display:grid;place-items:center;font-weight:700;color:var(--brand)}
-    .module h3{margin:0;font-size:16px}
-    .module p{margin:0;color:var(--muted);font-size:13px}
-    .module .meta{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
-
-    .module .actions{margin-top:auto;display:flex;gap:8px}
-    .btn-ghost{padding:8px 10px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:transparent;font-weight:600;color:var(--brand)}
-    .btn-secondary{padding:8px 10px;border-radius:8px;border:0;background:#eef2ff;color:var(--brand);font-weight:700}
-
-    /* progress list area */
-    .progress-list{display:flex;flex-direction:column;gap:10px}
-    .prog-item{display:flex;align-items:center;gap:12px;justify-content:space-between}
-    .prog-left{display:flex;gap:12px;align-items:center}
-    .circle{
-      --size:50px;
-      width:var(--size);height:var(--size);border-radius:50%;
-      display:grid;place-items:center;font-weight:700;background:#fbfbff;border:1px solid rgba(15,23,42,0.03)
-    }
-    .small{font-size:13px;color:var(--muted)}
-    .percent{font-weight:800;color:var(--brand)}
-
-    /* footer */
+    .card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 28px rgba(15,23,42,0.04)}
     footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
-
-    /* responsive */
-    @media (max-width:1000px){
-      .modules-grid{grid-template-columns:repeat(2,1fr)}
-      .layout{grid-template-columns:260px 1fr}
-      header{gap:10px}
-    }
-    @media (max-width:760px){
-      .layout{grid-template-columns:1fr;gap:12px}
-      .sidebar{order:2;position:static;height:auto}
-      .modules-grid{grid-template-columns:1fr}
-      nav.desktop{display:none}
-      .mobile-nav-toggle{display:inline-flex}
-    }
-
-    /* mobile toggle */
-    .mobile-nav-toggle{display:none;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(15,23,42,0.04)}
-    .mobile-menu{display:none;position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(7,9,14,0.45);z-index:60}
-    .mobile-panel{width:90%;max-width:340px;background:var(--card);height:100%;padding:18px;box-shadow:20px 0 60px rgba(10,12,20,0.12)}
-    .mobile-panel .navlist{margin-top:18px}
-
-    /* little helpers */
-    .muted{color:var(--muted);font-size:13px}
+    @media(max-width:760px){.layout{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -152,234 +48,58 @@
           <div style="font-size:13px;color:var(--muted)">Área de membros</div>
         </div>
       </div>
-
-      <nav class="desktop" aria-label="principal">
+      <nav class="desktop">
         <a href="#" class="active">Início</a>
         <a href="#">Módulos</a>
         <a href="#">Progresso</a>
       </nav>
-
-      <div class="user">
-        <button class="mobile-nav-toggle" id="openMobile" aria-label="abrir menu">☰</button>
-        <div class="user-actions" style="display:flex;gap:10px;align-items:center">
-          <button class="btn-primary">Entrar</button>
-          <div class="avatar">AL</div>
-        </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="btn-primary">Entrar</button>
+        <div class="avatar">AL</div>
       </div>
     </header>
 
-    <main class="layout" role="main">
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <div class="card profile">
-          <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#fff,#fbf7ff);display:grid;place-items:center;font-weight:800;color:var(--brand)">AL</div>
-          <div>
-            <div style="font-weight:800">Aluno Demo</div>
-            <div class="muted">membro desde 2024</div>
-            <div class="progress" style="margin-top:10px">
-              <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)">
-                <div>Progresso</div><div id="progressPercent">32%</div>
-              </div>
-              <div style="height:10px;background:#f1f5f9;border-radius:8px;margin-top:8px;overflow:hidden">
-                <div class="progress-bar" id="progressBar" style="width:32%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <nav class="card" aria-label="navegação secundária">
-          <div style="font-weight:800;margin-bottom:8px">Navegação</div>
-          <div class="navlist">
-            <a href="#" class="active">Início <span class="muted">•</span></a>
-            <a href="#">Módulos <span class="muted">12</span></a>
-            <a href="#">Progresso <span class="muted">detalhado</span></a>
-            <a href="#">Certificado <span class="muted">—</span></a>
-          </div>
-        </nav>
-
+    <main class="layout">
+      <!-- Sidebar -->
+      <aside>
         <div class="card">
-          <div style="font-weight:800;margin-bottom:8px">Apoio</div>
-          <div class="muted" style="margin-bottom:12px">Dúvidas? Entre em contato com nossa equipe no suporte.</div>
-          <button class="btn-ghost" onclick="alert('Abrir suporte (demo)')">Abrir suporte</button>
+          <div style="font-weight:800">Perfil</div>
+          <p class="muted">Aluno Demo</p>
         </div>
       </aside>
 
-      <!-- MAIN CONTENT -->
+      <!-- Conteúdo principal -->
       <section>
-        <div class="content-top">
-          <div class="welcome">
-            <h1>Bem-vindo de volta, Aluna!</h1>
-            <p>Continue seu aprendizado em bordado livre — você está progredindo muito bem.</p>
-          </div>
-
-          <div style="display:flex;gap:10px;align-items:center">
-            <div class="card" style="padding:10px 14px;display:flex;gap:10px;align-items:center">
-              <div style="font-size:13px;color:var(--muted)">Próxima aula</div>
-              <div style="font-weight:700">Pontos e texturas</div>
-            </div>
-            <button class="btn-primary" onclick="alert('Começar aula (demo)')">Continuar</button>
-          </div>
+        <div class="card">
+          <h1>Bem-vindo de volta!</h1>
+          <p class="muted">Continue seu aprendizado em bordado livre.</p>
         </div>
 
-        <div class="card" style="margin-bottom:14px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div style="font-weight:800">Módulos</div>
-            <div class="muted">Organizados por tema — clique para abrir</div>
-          </div>
-
-          <div style="margin-top:14px" class="modules-grid" id="modulesGrid">
-            <!-- Module 1 -->
-            <article class="module" data-progress="80" data-locked="false">
-              <div class="left">
-                <div class="thumb">M1</div>
-                <div>
-                  <h3>Módulo 1 — Introdução</h3>
-                  <p>Conheça as ferramentas, materiais e pontos básicos do bordado.</p>
-                  <div class="meta small">5 aulas • 42 min</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-secondary" onclick="openModule(event,1)">Abrir</button>
-                <button class="btn-ghost" onclick="markComplete(event,this)">Concluir</button>
-              </div>
-            </article>
-
-            <!-- Module 2 -->
-            <article class="module" data-progress="20" data-locked="false">
-              <div class="left">
-                <div class="thumb">M2</div>
-                <div>
-                  <h3>Módulo 2 — Pontos Básicos</h3>
-                  <p>Aprenda os pontos mais usados no bordado livre.</p>
-                  <div class="meta small">8 aulas • 1h10</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-secondary" onclick="openModule(event,2)">Abrir</button>
-                <button class="btn-ghost" onclick="markComplete(event,this)">Concluir</button>
-              </div>
-            </article>
-
-            <!-- Module 3 (locked example) -->
-            <article class="module" data-progress="0" data-locked="true">
-              <div class="left">
-                <div class="thumb">M3</div>
-                <div>
-                  <h3>Módulo 3 — Técnicas Avançadas</h3>
-                  <p>Técnicas para texturas e preenchimentos complexos.</p>
-                  <div class="meta small">10 aulas • 2h05</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-ghost" onclick="alert('Módulo bloqueado')">Bloqueado</button>
-                <button class="btn-ghost" onclick="alert('Informação do módulo (demo)')">Detalhes</button>
-              </div>
-            </article>
-
-            <!-- Module 4 -->
-            <article class="module" data-progress="45" data-locked="false">
-              <div class="left">
-                <div class="thumb">M4</div>
-                <div>
-                  <h3>Módulo 4 — Projetos</h3>
-                  <p>Coloque em prática o que aprendeu com projetos guiados.</p>
-                  <div class="meta small">6 aulas • 1h40</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-secondary" onclick="openModule(event,4)">Abrir</button>
-                <button class="btn-ghost" onclick="markComplete(event,this)">Concluir</button>
-              </div>
-            </article>
-
-            <!-- Module 5 -->
-            <article class="module" data-progress="10" data-locked="false">
-              <div class="left">
-                <div class="thumb">M5</div>
-                <div>
-                  <h3>Módulo 5 — Finalização</h3>
-                  <p>Técnicas para finalizar e apresentar seus bordados.</p>
-                  <div class="meta small">4 aulas • 30 min</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-secondary" onclick="openModule(event,5)">Abrir</button>
-                <button class="btn-ghost" onclick="markComplete(event,this)">Concluir</button>
-              </div>
-            </article>
-
-            <!-- Module 6 (demo) -->
-            <article class="module" data-progress="60" data-locked="false">
-              <div class="left">
-                <div class="thumb">M6</div>
-                <div>
-                  <h3>Módulo 6 — Extras</h3>
-                  <p>Dicas, variações e materiais alternativos.</p>
-                  <div class="meta small">3 aulas • 25 min</div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn-secondary" onclick="openModule(event,6)">Abrir</button>
-                <button class="btn-ghost" onclick="markComplete(event,this)">Concluir</button>
-              </div>
-            </article>
-          </div>
+        <div class="card" style="margin-top:20px">
+          <h3>Módulos</h3>
+          <p class="muted">Lista de módulos do curso</p>
         </div>
 
-        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start">
-          <div class="card" style="flex:1;min-width:320px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-              <div style="font-weight:800">Últimas aulas</div>
-              <div class="muted small">Atualizadas</div>
-            </div>
+        <div class="card" style="margin-top:20px">
+          <h3>Recursos</h3>
+          <p class="muted">Materiais de apoio e extras</p>
+        </div>
 
-            <div class="progress-list" style="margin-top:12px">
-              <div class="prog-item">
-                <div class="prog-left">
-                  <div class="circle">80%</div>
-                  <div>
-                    <div style="font-weight:700">Pontos Reta</div>
-                    <div class="small muted">Aula 3 • 12 min</div>
-                  </div>
-                </div>
-                <div class="muted">Concluído</div>
-              </div>
-
-              <div class="prog-item">
-                <div class="prog-left">
-                  <div class="circle">20%</div>
-                  <div>
-                    <div style="font-weight:700">Arcos e curvas</div>
-                    <div class="small muted">Aula 1 • 8 min</div>
-                  </div>
-                </div>
-                <div class="muted">Em progresso</div>
-              </div>
-
-              <div class="prog-item">
-                <div class="prog-left">
-                  <div class="circle">45%</div>
-                  <div>
-                    <div style="font-weight:700">Enchimentos</div>
-                    <div class="small muted">Aula 2 • 20 min</div>
-                  </div>
-                </div>
-                <div class="muted">Em progresso</div>
-              </div>
-            </div>
+        <!-- BLOCO DE PAGAMENTO VIA PIX -->
+        <div class="card" style="margin-top:20px">
+          <h3>Pagamento via PIX</h3>
+          <p class="muted">Escaneie o QR Code ou utilize a chave abaixo:</p>
+          
+          <div style="margin:16px 0;display:flex;justify-content:center">
+            <img src="https://via.placeholder.com/180x180.png?text=QR+Code" 
+                 alt="QR Code PIX" style="border-radius:8px">
           </div>
-
-          <div class="card" style="width:320px">
-            <div style="font-weight:800">Recursos</div>
-            <ul style="margin:10px 0 0;padding:0 18px;color:var(--muted)">
-              <li>Lista de materiais (PDF)</li>
-              <li>Grupo exclusivo</li>
-              <li>Tutoriais complementares</li>
-            </ul>
-            <div style="margin-top:12px">
-              <button class="btn-primary" style="width:100%" onclick="alert('Ir para recursos (demo)')">Acessar recursos</button>
-            </div>
+          
+          <div style="padding:12px;border:1px dashed #ccc;border-radius:8px;background:#fafafa;text-align:center;font-weight:600;font-size:14px;color:#aaa">
+            <!-- Chave PIX removida -->
           </div>
+          
+          <div style="margin-top:12px;height:36px"></div>
         </div>
 
         <footer>© <span id="year"></span> Bordado Livre — Clone visual (demo)</footer>
@@ -387,97 +107,10 @@
     </main>
   </div>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <div class="mobile-panel">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div style="display:flex;gap:10px;align-items:center">
-          <div class="logo" style="width:44px;height:44px;font-size:16px">BL</div>
-          <div style="font-weight:800">Bordado Livre</div>
-        </div>
-        <button id="closeMobile" style="background:transparent;border:0;font-size:20px">✕</button>
-      </div>
-
-      <div style="margin-top:18px">
-        <div class="navlist">
-          <a href="#" class="active">Início</a>
-          <a href="#">Módulos</a>
-          <a href="#">Progresso</a>
-          <a href="#">Certificado</a>
-        </div>
-      </div>
-
-      <div style="margin-top:22px">
-        <button class="btn-primary" style="width:100%">Entrar</button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // mobile menu toggle
-    const mobileMenu = document.getElementById('mobileMenu');
-    document.getElementById('openMobile').addEventListener('click', () => {
-      mobileMenu.style.display = 'block';
-      mobileMenu.setAttribute('aria-hidden','false');
-    });
-    document.getElementById('closeMobile').addEventListener('click', () => {
-      mobileMenu.style.display = 'none';
-      mobileMenu.setAttribute('aria-hidden','true');
-    });
-    mobileMenu.addEventListener('click', (e) => {
-      if(e.target === mobileMenu) { mobileMenu.style.display='none'; mobileMenu.setAttribute('aria-hidden','true'); }
-    });
-
-    // Initialize module progress bars and overall progress
-    function computeOverallProgress(){
-      const modules = document.querySelectorAll('.module');
-      let total=0, sum=0;
-      modules.forEach(m=>{
-        const p = Number(m.getAttribute('data-progress') || 0);
-        sum += p;
-        total++;
-      });
-      const percent = Math.round(sum/Math.max(1,total));
-      const bar = document.getElementById('progressBar');
-      const pct = document.getElementById('progressPercent');
-      bar.style.width = percent + '%';
-      pct.textContent = percent + '%';
-    }
-    computeOverallProgress();
-
-    // openModule - demo action: show details modal (alert for demo)
-    function openModule(e, id){
-      e.preventDefault();
-      alert('Abrindo módulo ' + id + ' (demo). Aqui você poderia navegar para a aula.');
-    }
-
-    // markComplete - toggles progress for that module (demo)
-    function markComplete(e, btn){
-      e.preventDefault();
-      const module = btn.closest('.module');
-      const current = Number(module.getAttribute('data-progress') || 0);
-      if(current < 100){
-        module.setAttribute('data-progress', 100);
-        // visually mark
-        module.querySelector('.thumb').textContent = 'OK';
-        module.style.boxShadow = '0 8px 30px rgba(16,185,129,0.08)';
-        btn.textContent = 'Concluído';
-        btn.disabled = true;
-      }
-      computeOverallProgress();
-    }
-
-    // Small accessibility: enable keyboard close for mobile menu
-    document.addEventListener('keydown', (ev) => {
-      if(ev.key === 'Escape'){
-        mobileMenu.style.display = 'none';
-        mobileMenu.setAttribute('aria-hidden','true');
-      }
-    });
   </script>
 </body>
 </html>
+
 
